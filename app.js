@@ -96,16 +96,18 @@ function anotherEmployee()
             employeeQuestions();   
         }else
         {
-            console.log("test1");
-            employeeArray.forEach(element => {
-                console.log(element.getName());
+            
+            fs.writeFile("index.html", render(employeeArray),(err) =>
+            {
+                if(err)
+                {
+                    throw err;
+                }
             });
-            console.log("test2");
-
-            console.log(render(employeeArray));
         }
     })
 }
+
 
 employeeQuestions();
 // Write code to use inquirer to gather information about the development team members,
