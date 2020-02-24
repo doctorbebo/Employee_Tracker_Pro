@@ -84,7 +84,7 @@ function employeeQuestions()
                         anotherEmployee()
                     })
                 break;
-        }
+        }    
     });
 }
 function anotherEmployee()
@@ -96,6 +96,12 @@ function anotherEmployee()
             employeeQuestions();   
         }else
         {
+            console.log("test1");
+            employeeArray.forEach(element => {
+                console.log(element.getName());
+            });
+            console.log("test2");
+
             console.log(render(employeeArray));
         }
     })
