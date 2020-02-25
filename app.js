@@ -97,7 +97,7 @@ function anotherEmployee()
         }else
         {
             
-            fs.writeFile("index.html", render(employeeArray),(err) =>
+            fs.writeFile("team.html", render(employeeArray),(err) =>
             {
                 if(err)
                 {
